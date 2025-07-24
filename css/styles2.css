@@ -1,0 +1,151 @@
+/* ======= Global Styles ======= */
+html, body {
+    background: linear-gradient(120deg, #181924 0%, #24243e 100%);
+    color: #ececec;
+    font-family: 'Montserrat', 'Roboto Mono', monospace, sans-serif;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.padding-container {
+    padding: 2rem 4vw;
+}
+
+/* ======= Navbar & Footer ======= */
+.navbar, .footer-section {
+    background: rgba(28, 32, 48, 0.95);
+    box-shadow: 0 6px 32px 0 #141d2b40;
+    border-bottom: 1.5px solid #0fffee40;
+}
+
+.navbar-brand {
+    color: #62efff !important;
+    font-family: 'Bungee Spice', cursive;
+    letter-spacing: 2px;
+    font-size: 1.6rem;
+    text-shadow: 0 2px 24px #62efff99;
+}
+
+.navbar-nav .nav-link {
+    color: #bbb;
+    margin: 0 18px;
+    font-weight: 500;
+    transition: color 0.19s, text-shadow 0.22s;
+}
+
+.navbar-nav .nav-link:hover, .navbar-brand:hover {
+    color: #ee74fd !important;
+    text-shadow: 0 0 12px #ee74fdcc;
+}
+
+.social-links a i {
+    color: #9ef7fa;
+    transition: color 0.19s, text-shadow 0.22s;
+}
+
+.social-links a:hover i {
+    color: #fdfb81;
+    text-shadow: 0 0 8px #fdfb8188;
+}
+
+/* ======= About-Me Section & Typed.js Styling ======= */
+.about-me .text-content {
+    font-size: 1.18rem;
+    line-height: 1.7;
+    background: rgba(28,40,62,0.92);
+    border-radius: 16px 36px 16px 36px;
+    padding: 2rem 2.1rem;
+    box-shadow: 0 0 24px 0 #1ec8ef17;
+    border: 1.5px solid #61dafb38;
+    margin-top: 20px;
+}
+
+#element > span {
+    font-family: 'Bungee Spice', cursive;
+    background: linear-gradient(95deg,#74ebd5 30%,#ee74fd 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 2.3rem;
+    font-weight: 800;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    display: block;
+    margin-bottom: .4rem;
+    transition: font-size 0.3s, text-shadow 0.15s;
+    text-shadow: 0 0 14px #61dafb80;
+    animation: fadeInTyping 1.2s;
+}
+
+@keyframes fadeInTyping {
+    from { opacity: 0; transform: translateY(28px);}
+    to { opacity: 1; transform: translateY(0);}
+}
+
+/* ======= Avatar / Image Styling ======= */
+.img-container img {
+    border-radius: 50%;
+    border: 2px solid #62efff;
+    box-shadow: 0 0 60px #61dafb33, 0 1.2px 20px #18192477;
+    background: #181924;
+    width: 180px; max-width: 98vw;
+    margin: 0 auto;
+    display: block;
+    transition: box-shadow 0.35s;
+}
+
+.img-container img:hover {
+    box-shadow: 0 0 90px #ee74fd55, 0 0 18px #74ebd550;
+    border-color: #ee74fd;
+}
+
+/* ======= Buttons & Links ======= */
+.btn-neon {
+    display: inline-block;
+    color: #161616;
+    background: linear-gradient(93deg,#74ebd5 0%,#fdfb81 100%);
+    border: none;
+    border-radius: 9px;
+    font-family: 'Montserrat', monospace;
+    font-weight: 700;
+    box-shadow: 0 0 10px #61dafb44;
+    letter-spacing: 2px;
+    padding: 0.6rem 2.3rem;
+    margin: 1rem 0;
+    transition: background 0.2s, box-shadow 0.18s;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+}
+
+.btn-neon:hover {
+    background: linear-gradient(88deg,#ee74fd 0%,#74ebd5 96%);
+    color: #181924;
+    box-shadow: 0 0 20px #fdfb81cc;
+}
+
+/* ======= Responsive & Grid Enhancements ======= */
+@media (max-width: 900px) {
+    .about-me .text-content {
+        font-size: 1rem;
+        padding: 1.1rem;
+    }
+    #element > span {
+        font-size: 1.2rem;
+    }
+    .img-container img {
+        width: 98vw;
+        margin-bottom: 1rem;
+    }
+}
+
+.grid-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2.2rem;
+}
+
+.img-container, .text-content {
+    flex: 1 1 300px;
+    min-width: 0;
+}

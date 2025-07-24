@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wonder Team – Our Story</title>
+    <link href="https://db.onlinewebfonts.com/c/031da03967812d134ed68febd3ba78a9?family=GT+America+Regular"
+        rel="stylesheet">
+
+    <!-- Custom Font Link -->
+    <link rel="stylesheet" href="fonts/style.css">
+    <link href="https://db.onlinewebfonts.com/c/031da03967812d134ed68febd3ba78a9?family=GT+America+Regular"
+        rel="stylesheet">
+
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href="css/nivo-lightbox_new.css" rel="stylesheet" type="text/css">
+    <link href="css/nivo_themes/default/default.css" rel="stylesheet" type="text/css">
+    
+    <!-- Bootstrap Minified CSS Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    
+    <!-- Bootstrap Minified JS Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Custom CSS Link -->
+    <link rel="stylesheet" href="css/styles.css">
+
+    <!-- Font Awesome CDN Link -->
+    <script src="https://kit.fontawesome.com/71a4119613.js" crossorigin="anonymous"></script>
+    <link href="/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="/fontawesome/css/solid.min.css" rel="stylesheet">
+
+    <style>
+        /* Use the precise vibrant background from previous pages */
+        body {
+            background: linear-gradient(to right, #320A6B, #065084, #0F828C);
+            color: #23293c;
+            font-family: 'Acorn', sans-serif;
+            margin: 0;
+            min-height: 100vh;
+            font-size: 1.11em;
+            letter-spacing: 0.01em;
+            line-height: 1.75;
+            box-sizing: border-box;
+            padding: 0;
+            scroll-behavior: smooth;
+        }
+
+
+        .wave-animation {
+            background: linear-gradient(135deg,
+                    #320A6B 0%,
+                    #065084 25%,
+                    #054b52 50%,
+                    #320A6B 75%,
+                    #065084 100%);
+            background-size: 300% 100%;
+            animation: gradient-move 6s ease-in-out infinite alternate;
+        }
+
+        @keyframes gradient-move {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .container-wide {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 2.4rem 3rem 2.4rem;
+        }
+
+        header {
+            text-align: left;
+            margin-top: 3rem;
+            margin-bottom: 2.3rem;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            letter-spacing: -2px;
+            color: #fff;
+            margin-bottom: 0.3em;
+            line-height: 1.05;
+            font-family: 'Acorn', 'Arial Rounded MT Bold', sans-serif;
+            text-shadow: 0 6px 40px #181c3b44;
+        }
+
+        header .hero-tagline {
+            color: #b9d5ff;
+            font-size: 1.4em;
+            margin-bottom: 0.3em;
+            font-weight: 400;
+            letter-spacing: 0.01em;
+        }
+
+        main {
+            margin-top: 2.5rem;
+        }
+
+        .story-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 3.8rem;
+        }
+
+        .profile-card {
+            border-radius: 18px;
+            background: #fff;
+            color: #273057;
+            box-shadow: 0 8px 36px rgba(61, 28, 102, 0.08), 0 0px 1px #6750be22;
+            padding: 2.1rem 2.5rem 2rem 2.5rem;
+            position: relative;
+            overflow: hidden;
+            transition: box-shadow 0.3s, transform 0.25s;
+            border-left: 7px solid #65a2f6;
+            border-bottom: 1px solid #e3eaf5;
+            will-change: box-shadow, transform;
+            min-width: 0;
+            opacity: 0;
+            transform: translateY(60px) scale(0.98);
+            animation: fadeUpCard 1.1s cubic-bezier(.22, 1.15, .55, 1.03) forwards;
+        }
+
+        .profile-card:nth-child(1) {
+            animation-delay: 0.2s;
+        }
+
+        .profile-card:nth-child(2) {
+            animation-delay: 0.45s;
+        }
+
+        .profile-card:nth-child(3) {
+            animation-delay: 0.73s;
+        }
+
+        .profile-card:nth-child(4) {
+            animation-delay: 1.05s;
+        }
+
+        .profile-card:nth-child(5) {
+            animation-delay: 1.25s;
+        }
+
+        @keyframes fadeUpCard {
+            to {
+                opacity: 1;
+                transform: translateY(0) scale(1);
+            }
+        }
+
+        .profile-card:hover {
+            box-shadow: 0 16px 54px #5377c933, 0 4px 28px #0281c713;
+            transform: translateY(-6px) scale(1.015);
+            border-left-color: #ffb34f;
+        }
+
+        .member-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 0.6em;
+            flex-wrap: wrap;
+        }
+
+        .member-avatar {
+            width: 54px;
+            height: 54px;
+            background: linear-gradient(135deg, #157bff 30%, #ebcbff 100%);
+            border-radius: 50%;
+            margin-right: 22px;
+            border: 3px solid #fff;
+            box-shadow: 0 2px 16px #65a2f644;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2em;
+            color: #fff;
+            font-weight: 700;
+            text-shadow: 0 2px 8px #72c3ff44;
+            user-select: none;
+        }
+
+        .member-details h2 {
+            font-size: 1.22em;
+            letter-spacing: 0.01em;
+            margin: 0 0 0.15em 0;
+            font-weight: 700;
+            color: #222453;
+        }
+
+        .profile-card .traits {
+            font-size: 1.01em;
+            color: #495e7a;
+            margin-bottom: .7em;
+        }
+
+        .profile-card .tags {
+            display: flex;
+            gap: 9px;
+            flex-wrap: wrap;
+            margin-bottom: .5em;
+        }
+
+        .talk-bubble {
+            display: block;
+            background: #f5f7fe;
+            color: #004bc3;
+            border-radius: 0 14px 14px 14px;
+            padding: 0.85em 1.35em;
+            font-size: 1.05em;
+            line-height: 1.5;
+            box-shadow: 0 1px 16px #5a8ff933;
+            margin-top: 1.3em;
+            margin-left: 0;
+            margin-bottom: 0.75em;
+            font-style: italic;
+            font-weight: 400;
+            border-left: 3px solid #5ab2ff44;
+        }
+
+        .member-role {
+            background: #317faa12;
+            color: #00527e;
+            padding: 3px 20px;
+            border-radius: 15px;
+            font-size: .95em;
+            font-weight: 600;
+        }
+
+        /* Section for team spirit, etc */
+        .highlight-section {
+            border-radius: 18px;
+            background: linear-gradient(120deg, #eaf6ff 80%, #f5f4fd 100%);
+            color: #123149;
+            padding: 2.3rem 2.3rem 2.3rem 2.8rem;
+            margin-top: 2.2em;
+            box-shadow: 0 2px 24px #5177dd19;
+            position: relative;
+            border-left: 7px solid #4fb5da;
+            border-bottom: 1px solid #fff7;
+            animation: fadeUpCard 1.5s 1.2s forwards;
+            opacity: 0;
+        }
+
+        .highlight-section.visible {
+            opacity: 1;
+        }
+
+        .highlight-section h2 {
+            color: #194066;
+            font-size: 1.18rem;
+            margin-bottom: 1.3em;
+            margin-top: 0;
+            letter-spacing: 0.01em;
+        }
+
+        .highlight-list {
+            margin-left: 0.7em;
+            color: #204b77;
+            font-size: 1.08em;
+        }
+
+        blockquote {
+            color: #157bff;
+            border-left: 3px solid #4fb5da95;
+            margin: 1.2em 0 0.5em 0;
+            padding-left: 1.2em;
+            font-style: italic;
+            font-size: 1.13em;
+            background: #f3f6ff;
+            border-radius: 8px;
+            box-shadow: 0 2px 9px #78b9b51e;
+        }
+
+        /* Responsive adjustments */
+        @media (max-width: 900px) {
+            .container-wide {
+                padding: 0 1.4rem 2.4rem 1.2rem;
+            }
+
+            .profile-card,
+            .highlight-section {
+                padding: 1.2rem 1rem 1.2rem 1.1rem;
+            }
+
+            main {
+                margin-top: 0;
+            }
+
+            header {
+                margin-top: 1.2rem;
+            }
+        }
+
+        @media (max-width: 600px) {
+            .container-wide {
+                padding-left: 0.4rem;
+                padding-right: 0.4rem;
+            }
+
+            .profile-card,
+            .highlight-section {
+                border-radius: 10px;
+            }
+
+            header h1 {
+                font-size: 1.5em;
+            }
+        }
+    </style>
+
+</head>
+
+<body class="wave-animation">
+
+    <!-- Header Section -->
+    <nav class="navbar navbar-expand-lg padding-container">
+        <!--Navbar brand-->
+        <a style="padding: 5px;" href="/" class="navbar-brand"><img src="images/Group-icon.png" height="50px" alt=""></a>
+    
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!--Nav-links-->
+            <div class="navbar-nav ms-auto text-center">
+                <div class="nav-item fs-4">
+                    <a href="story.html" class="nav-link">OUR STORY<i class="fa-brands fa-earlybirds"></i></a>
+                </div>
+    
+                <div class="nav-item fs-4">
+                    <a href="contactus.html" class="nav-link">CONTACT US<i class="fa-solid fa-cubes"></i></a>
+                </div>
+    
+                <div class="nav-item fs-4">
+                    <a href="/" class="nav-link">HOME<i class="fa-solid fa-house"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-wide">
+        <header>
+            <h1>Our Wonder Team Story</h1>
+            <div class="hero-tagline">Discover how unique personalities shape our journey—through imagination, humor,
+                trust, and friendship.</div>
+        </header>
+        <main>
+            <div class="story-grid">
+                <!-- Priyam Card -->
+                <section class="profile-card" tabindex="0">
+                    <div class="member-header">
+                        <div class="member-avatar" aria-label="Priyam">P</div>
+                        <div class="member-details">
+                            <h2>Priyam</h2>
+                            <div class="member-role">The Observer</div>
+                        </div>
+                    </div>
+                    <div class="traits">Always hunting for unique solutions and armed with next-level humor. Even when
+                        ideas don’t always hit the target, Priyam’s creative spark inspires new heights in our projects.
+                    </div>
+                    <div class="tags">
+                        <span class="tag">Imaginative</span>
+                        <span class="tag">Resourceful</span>
+                        <span class="tag">Witty</span>
+                    </div>
+                    <div class="talk-bubble">"His imagination never fails to amaze the team—he keeps everyone thinking
+                        outside the box."</div>
+                </section>
+                <!-- Adarsh Card -->
+                <section class="profile-card" tabindex="0">
+                    <div class="member-header">
+                        <div class="member-avatar" aria-label="Adarsh">A</div>
+                        <div class="member-details">
+                            <h2>Adarsh</h2>
+                            <div class="member-role">Good Communicator</div>
+                        </div>
+                    </div>
+                    <div class="traits">An anime lover who leads with care and shoulder-to-lean-on responsibility. His
+                        approachable nature and communication skills hold the team together—even in crunch time.</div>
+                    <div class="tags">
+                        <span class="tag">Supportive</span>
+                        <span class="tag">Responsible</span>
+                        <span class="tag">Caring</span>
+                    </div>
+                    <div class="talk-bubble">"He’s always there to help, and his sense of humor brings comfort and joy
+                        to everyday work life."</div>
+                </section>
+                <!-- Riyanshu Card -->
+                <section class="profile-card" tabindex="0">
+                    <div class="member-header">
+                        <div class="member-avatar" aria-label="Riyanshu">R</div>
+                        <div class="member-details">
+                            <h2>Riyanshu</h2>
+                            <div class="member-role">Consistent Player</div>
+                        </div>
+                    </div>
+                    <div class="traits">Reliable, always present, and unafraid to mix humor with steady commitment.
+                        Riyanshu’s friendship and loyalty help the team succeed and stay grounded.</div>
+                    <div class="tags">
+                        <span class="tag">Consistent</span>
+                        <span class="tag">Fun</span>
+                        <span class="tag">Team Player</span>
+                    </div>
+                    <div class="talk-bubble">"His presence brings balance—he’s steady at deadlines and the source of
+                        many smiles."</div>
+                </section>
+                <!-- Team Dynamics Card -->
+                <section class="profile-card" tabindex="0">
+                    <h2>Moments That Define Us</h2>
+                    <div class="traits">
+                        Our group chats or games quickly escalate—someone’s humor always peaks, and the rest of the team
+                        has to “humble” them, making every session memorable. Every day feels like a celebration, with
+                        inside jokes, creativity, and friendship in abundance.
+                    </div>
+                </section>
+            </div>
+            <!-- Highlighted Team Spirit Section -->
+            <section class="highlight-section" tabindex="0">
+                <h2>Our Team’s Spirit</h2>
+                <ul class="highlight-list">
+                    <li>Everyone pushes each other to grow both professionally and personally.</li>
+                    <li>Small moments, constant encouragement, and infectious humor are at the heart of every project.
+                    </li>
+                    <li>It’s not just the success—it’s the way success happens that makes our team unique.</li>
+                </ul>
+                <blockquote>
+                    “With this team, I feel very good not because of the success we have achieved but because every
+                    member pushes another member to grow professionally and personally.”
+                </blockquote>
+            </section>
+        </main>
+    </div>
+    <script>
+        // Fade-up reveal for cards and highlight section
+        window.addEventListener("DOMContentLoaded", () => {
+            function revealOnScroll() {
+                const revealClasses = ['profile-card', 'highlight-section'];
+                revealClasses.forEach(cls => {
+                    document.querySelectorAll('.' + cls).forEach(el => {
+                        const rect = el.getBoundingClientRect();
+                        if (rect.top < window.innerHeight * 0.88) {
+                            el.classList.add('visible');
+                        }
+                    });
+                });
+            }
+            revealOnScroll();
+            window.addEventListener('scroll', revealOnScroll, { passive: true });
+        });
+    </script>
+</body>
+
+</html>

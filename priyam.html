@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Priyam Singh - Professional Resume Tree</title>
+    <!-- Custom Font Link -->
+    <link rel="stylesheet" href="fonts/style.css">
+    <link href="https://db.onlinewebfonts.com/c/031da03967812d134ed68febd3ba78a9?family=GT+America+Regular"
+        rel="stylesheet">
+    
+    <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+    <link href="css/nivo-lightbox_new.css" rel="stylesheet" type="text/css">
+    <link href="css/nivo_themes/default/default.css" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css2?family=Acorn&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background: linear-gradient(120deg, #19213A 0%, #265088 100%);
+            color: #6db7c9;
+            font-family: 'Acorn', sans-serif;
+            margin: 0;
+            padding: 2rem 0;
+            min-height: 100vh;
+            box-sizing: border-box;
+        }
+
+        .wave-animation {
+            background: linear-gradient(135deg,
+                    #320A6B 0%,
+                    #065084 25%,
+                    #054b52 50%,
+                    #320A6B 75%,
+                    #065084 100%);
+            background-size: 300% 100%;
+            animation: gradient-move 6s ease-in-out infinite alternate;
+        }
+
+        @keyframes gradient-move {
+            0% {
+                background-position: 0% 50%;
+            }
+
+            100% {
+                background-position: 100% 50%;
+            }
+        }
+
+        .container-tree {
+            position: relative;
+            max-width: 860px;
+            margin: 0 auto;
+            padding-left: 4rem;
+            z-index: 1;
+        }
+
+        /* Central timeline trunk */
+        .container-tree::before {
+            content: '';
+            position: absolute;
+            left: 1.2rem;
+            top: 0;
+            bottom: 0;
+            width: 5px;
+            background: linear-gradient(to bottom, #274066, #317faa 60%, #184061 100%);
+            border-radius: 2.5px;
+            z-index: 0;
+        }
+
+        header {
+            margin-bottom: 2.5rem;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            color: #e2e7f3;
+            letter-spacing: 1.2px;
+            font-family: 'Acorn', 'Arial Rounded MT Bold', sans-serif;
+            margin-bottom: 0.3em;
+        }
+
+        .subtitle {
+            color: #8ed8f2;
+            font-size: 1.04rem;
+            margin-bottom: 1rem;
+        }
+
+        section {
+            position: relative;
+            background: #1e273a62;
+            border-radius: 13px 18px 10px 22px;
+            padding: 1.5rem 2.1rem;
+            margin: 2.5rem 0 2.5rem 3.6rem;
+            box-shadow: 0 2px 14px #19375b19;
+            border-left: 4px solid #317faa59;
+            transition: border-color 0.3s, background 0.28s, box-shadow 0.25s;
+            z-index: 1;
+            outline: none;
+        }
+
+        section:focus-within,
+        section:hover {
+            border-left: 4px solid #4fb5da;
+            background: #253352e9;
+            box-shadow: 0 4px 32px #82a0b486;
+        }
+
+        /* Branch connector from trunk */
+        section::before {
+            content: '';
+            position: absolute;
+            left: -3.5rem;
+            height: 6px;
+            width: 3.3rem;
+            background: linear-gradient(90deg, #274066 40%, #4fb5da 100%);
+            border-radius: 3px 0 6px 3px;
+            top: 2rem;
+            z-index: 2;
+            transition: background 0.2s;
+        }
+
+        section:hover::before,
+        section:focus-within::before {
+            background: linear-gradient(90deg, #356fa1 30%, #77c8e7 100%);
+        }
+
+        /* Minimal leaf/accent */
+        section::after {
+            content: '';
+            position: absolute;
+            left: -16px;
+            top: 17px;
+            width: 13px;
+            height: 13px;
+            background: #4fb5da;
+            border-radius: 50% 55% 42% 38% / 54% 47% 54% 54%;
+            opacity: 0.45;
+            z-index: 3;
+        }
+
+        section:focus-within::after,
+        section:hover::after {
+            background: #8ed8f2;
+            opacity: 0.7;
+        }
+
+        /* Visual branch offset for variety */
+        section:nth-of-type(2)::before,
+        section:nth-of-type(2)::after {
+            top: 2.6rem;
+        }
+
+        section:nth-of-type(3)::before,
+        section:nth-of-type(3)::after {
+            top: 2.1rem;
+        }
+
+        section:nth-of-type(4)::before,
+        section:nth-of-type(4)::after {
+            top: 1.5rem;
+        }
+
+        h2 {
+            color: #e2e7f3;
+            font-size: 1.18rem;
+            letter-spacing: 1.1px;
+            margin-bottom: 0.8em;
+            border-left: 3px solid #4fb5da50;
+            padding-left: 0.5em;
+            font-weight: 700;
+        }
+
+        h3 {
+            font-size: 1.01rem;
+            color: #7dceec;
+            margin-bottom: 0.32em;
+        }
+
+        ul {
+            color: #acd9e9;
+            padding-left: 1.2em;
+            margin: 0 0 1em 0;
+            font-size: 1.02em;
+        }
+
+        li {
+            margin-bottom: 0.4em;
+        }
+
+        p em {
+            color: #c1e4ff;
+            font-style: italic;
+        }
+
+        .contact-link {
+            color: #4fb5da;
+            text-decoration: underline;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        .contact-link:hover,
+        .contact-link:focus {
+            color: #ffb34f;
+        }
+
+        section {
+            outline: none;
+        }
+
+        section:focus-within {
+            border-left: 4px solid #6bd6ff;
+            background: #2a4767e9;
+        }
+
+        @media (max-width: 700px) {
+            body {
+                padding: 1rem 0.1rem;
+            }
+
+            .container-tree {
+                padding-left: 1.1rem;
+            }
+
+            section {
+                padding: 1rem 0.5rem 1rem 0.6rem;
+                margin-left: 1.3rem;
+            }
+
+            section::before {
+                left: -1.7rem;
+                width: 1.1rem;
+                height: 4px;
+            }
+
+            section::after {
+                width: 8px;
+                height: 8px;
+                left: -8px;
+                top: 10px;
+            }
+
+            h1 {
+                font-size: 1.24rem;
+            }
+        }
+    </style>
+
+    <!-- Bootstrap Minified CSS Link -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    
+    <!-- Bootstrap Minified JS Link -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Custom CSS Link -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- Font Awesome CDN Link -->
+    <script src="https://kit.fontawesome.com/71a4119613.js" crossorigin="anonymous"></script>
+    <link href="/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+    <link href="/fontawesome/css/brands.min.css" rel="stylesheet">
+    <link href="/fontawesome/css/solid.min.css" rel="stylesheet">
+</head>
+
+<body class="wave-animation">
+
+    <!-- Header Section -->
+    <nav class="navbar navbar-expand-lg padding-container">
+        <!--Navbar brand-->
+        <a style="padding: 5px;" href="/" class="navbar-brand"><img src="images/Group-icon.png" height="50px" alt=""></a>
+    
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!--Nav-links-->
+            <div class="navbar-nav ms-auto text-center">
+                <div class="nav-item fs-4">
+                    <a href="story.html" class="nav-link">OUR STORY<i class="fa-brands fa-earlybirds"></i></a>
+                </div>
+    
+                <div class="nav-item fs-4">
+                    <a href="contactus.html" class="nav-link">CONTACT US<i class="fa-solid fa-cubes"></i></a>
+                </div>
+    
+                <div class="nav-item fs-4">
+                    <a href="/" class="nav-link">HOME<i class="fa-solid fa-house"></i></a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+    <div class="container-tree">
+        <header>
+            <h1>Priyam Singh</h1>
+            <div class="subtitle">Frontend Developer &amp; Creative Codesmith</div>
+        </header>
+        <section tabindex="0">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML5, CSS3, JavaScript</li>
+                <li>Bootstrap, Animate.css, Typed.js</li>
+                <li>Node.js, Express.js, MySQL</li>
+                <li>Responsive Design, Git &amp; GitHub</li>
+            </ul>
+        </section>
+        <section tabindex="0">
+            <h2>Work Experience</h2>
+            <h3>Frontend Developer, Creative Solutions</h3>
+            <p><em>2023 - Present</em></p>
+            <ul>
+                <li>Developed branded landing pages and reusable UI components.</li>
+                <li>Worked closely with backend/APIs and design teams.</li>
+            </ul>
+        </section>
+        <section tabindex="0">
+            <h2>Education</h2>
+            <h3>MCA, Computer Science</h3>
+            <p>AKTU, 2023–2025</p>
+        </section>
+        <section tabindex="0">
+            <h2>Contact</h2>
+            <p>Email: <a class="contact-link" href="mailto:priyamsingh4501@gmail.com">priyamsingh4501@gmail.com</a></p>
+            <p>GitHub: <a class="contact-link" href="https://github.com/priyam4501"
+                    target="_blank">https://github.com/priyam4501</a></p>
+        </section>
+    </div>
+</body>
+
+</html>
